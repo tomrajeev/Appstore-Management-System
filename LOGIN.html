@@ -141,13 +141,13 @@
             setTimeout(() => {
             const box = document.getElementById('loading');
             loading.style.display = 'none';
-            }, 2000);
+            }, 200);
             function redirect()
             {
             if(document.getElementById("here").checked == true)
-                    window.location.href = 'contact.html';
+                    window.location.href = 'DEV.html';
             else if(document.getElementById("here").checked == false)
-                    window.location.href = 'registration.html';        
+                    window.location.href = 'USER.html';        
             }
         </script>
         <div id="loading" class="center">
@@ -168,8 +168,8 @@
                     <div style=" display: flex;">
                         <div class="column left" style="width: 90%; padding-right:30px ; padding-top: 60px;" >
                             <h2 style="font-size:xx-large; text-align: center; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; margin-left: 10px;">LOGIN TO YOUR ACCOUNT</h2>
-                            <input id="login" placeholder="Email" name="FName" type="text" required><br><br>
-                            <input id="login" placeholder="Password" name="FName" type="text" required><br><br>
+                            <input id="login" placeholder="Email" name="FName" type="email" required><br><br>
+                            <input id="login" placeholder="Password" name="FName" type="password" required><br><br>
                             <label style="margin-left: 3%;">Developer Access</label>
                             <input style="height: 15px; width: 15px;" id="here" type="checkbox" value="Dev Access"><br><br>
                             <input id="button" name="but" type="submit" value="LOGIN" onclick="redirect()">
