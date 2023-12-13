@@ -67,9 +67,9 @@
             background-color: white;
             width: 70%;
             margin-left: 15%;
-            margin-top: 4%;
+            margin-top: 2.5%;
             border-radius: 5px;
-            height: 550px;
+            height: 570px;
             border-radius: 10px;
             box-shadow: 0 10px 20px rgb(0 0 0/0.5)
         }
@@ -107,6 +107,15 @@
             margin-left: 25%;
             border-radius: 50px;
             font-size: large;
+            transition: transform 0.3s;
+        }
+        #button:hover{
+            transform: scale(1.1);
+        }
+        img.icon:hover,img.icon:focus{
+            width: 9%;
+            height: 9%;
+            margin-right: 10%;
         }
         .icon{
             width: 50px; 
@@ -132,7 +141,14 @@
             setTimeout(() => {
             const box = document.getElementById('loading');
             loading.style.display = 'none';
-            }, 2000);
+            }, 200);
+            function redirect()
+            {
+            if(document.getElementById("here").checked == true)
+                    window.location.href = 'contact.html';
+            else if(document.getElementById("here").checked == false)
+                    window.location.href = 'registration.html';        
+            }
         </script>
         <div id="loading" class="center">
             <div class="wave"></div>
@@ -155,17 +171,17 @@
                             <input id="login" placeholder="Email" name="FName" type="text" required><br><br>
                             <input id="login" placeholder="Password" name="FName" type="text" required><br><br>
                             <label style="margin-left: 3%;">Developer Access</label>
-                            <input style="height: 15px; width: 15px;" type="checkbox" value="Dev Access"><br><br>
-                            <input id="button" name="but" type="submit" value="LOGIN" onclick="showAlert()">
+                            <input style="height: 15px; width: 15px;" id="here" type="checkbox" value="Dev Access"><br><br>
+                            <input id="button" name="but" type="submit" value="LOGIN" onclick="redirect()">
                             <h4 style="text-align: center; color: #929292;">----------------------LOGIN WITH OTHERS----------------------</h4>
-                            <a href="https://mail.google.com">
+                            <a class="otherlog" href="https://mail.google.com">
                                 <img src="gmailbw.png" class="icon" id="gmail">
                             </a>
-                            <a href="https://www.facebook.com/">
+                            <a class="otherlog" href="https://www.facebook.com/">
                                 <img src="fbbw.png" class="icon" id="fb">
                             </a>
                         </div>
-                        <div class="column right" style="background-size: 100% 96.5%; background-repeat: no-repeat; background-image: url('200.gif');">  
+                        <div class="column right" style="border-radius: 0px 10px 10px 0px; background-size: 100% 100%; background-repeat: no-repeat; background-image: url('lolijojo.gif');">  
                         </div>
                     </div>
                 </form>
