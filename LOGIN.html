@@ -190,37 +190,6 @@
 
     </style>
     <body>
-        <script>
-            setTimeout(() => {
-                const box = document.getElementById('loading');
-                loading.style.display = 'none';
-            }, 1000);
-            function redirect()
-            {
-                    if(document.getElementById("here").checked == true)
-                            window.location.href = 'DEV.html';
-                    else if(document.getElementById("here").checked == false)
-                            window.location.href = 'USER.html';   
-                
-            }
-            function showhide(){
-                var x = document.getElementById('old');
-                var y = document.getElementById('new');
-                var dispx = window.getComputedStyle(x).display;
-                var dispy = window.getComputedStyle(y).display;
-                if(x.style.display == 'block'){
-                    x.style.display = 'none';           //why me gay
-                    y.style.display = 'block';
-                }
-                else{
-                    y.style.display = 'none';
-                    x.style.display = 'block';
-                }
-            }
-            function show(main_area) {
-                document.getElementById('mainmain').innerHTML = document.getElementById(main_area).innerHTML;
-            }
-        </script>
         <div id="loading" class="center">
             <div class="wave"></div>
             <div class="wave"></div>
@@ -238,7 +207,7 @@
                     <div style=" display: flex;">
                         <div class="column form" id="logform">
                             <h2>LOGIN TO YOUR ACCOUNT</h2>
-                            <form action=""methods="post">
+                            <form methods="post">
                                 <input class="login" placeholder="Email" name="FName" type="email" required><br><br>
                                 <input class="login" placeholder="Password" name="FName" type="password" required><br><br>
                                 <input id="button" name="but" type="submit" value="LOGIN">
@@ -285,5 +254,35 @@
                   </div>
             </div>
         </div>
+        <script>
+            setTimeout(() => {
+                const box = document.getElementById('loading');
+                loading.style.display = 'none';
+            }, 1000);
+            function redirect()
+            {
+                window.location.href = "DEV.html";
+            }
+            document.getElementById("button").addEventListener("click", redirect);
+            function showhide(){
+                var x = document.getElementById('old');
+                var y = document.getElementById('new');
+                var dispx = window.getComputedStyle(x).display;
+                var dispy = window.getComputedStyle(y).display;
+                if(x.style.display == 'block'){
+                    x.style.display = 'none';           //why me gay
+                    y.style.display = 'block';
+                }
+                else{
+                    y.style.display = 'none';
+                    x.style.display = 'block';
+                }
+            }
+            function show(main_area) {
+                document.getElementById('mainmain').innerHTML = document.getElementById(main_area).innerHTML;
+            }
+            
+            sessionStorage.setItem('source', 'user');
+        </script>
     </body>
 </html>

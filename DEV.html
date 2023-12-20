@@ -299,32 +299,32 @@
                 <div>
                     <form>
                         <div class="appbox" id="appContainer">
-                            <a class="appCard" href="https://chat.openai.com/" target="_blank">
+                            <a class="appCard" href="app1.html" target="_blank">
                                 <div class="appName">
                                     <input type="text" class="tile" name="app1"> 
                                 </div>
                             </a>
-                            <a class="appCard" href="https://chat.openai.com/" target="_blank">
+                            <a class="appCard" href="app2.html" target="_blank">
                                 <div class="appName">
                                     <input type="text" class="tile" name="app2"> 
                                 </div>
                             </a>
-                            <a class="appCard" href="https://chat.openai.com/" target="_blank">
+                            <a class="appCard" href="app3.html" target="_blank">
                                 <div class="appName">
                                     <input type="text" class="tile" name="app3"> 
                                 </div>
                             </a>
-                            <a class="appCard" href="https://chat.openai.com/" target="_blank">
+                            <a class="appCard" href="app4.html" target="_blank">
                                 <div class="appName">
                                     <input type="text" class="tile" name="app4"> 
                                 </div>
                             </a>
-                            <a class="appCard" href="https://chat.openai.com/" target="_blank">
+                            <a class="appCard" href="app5.html" target="_blank">
                                 <div class="appName">
                                     <input type="text" class="tile" name="app5"> 
                                 </div>
                             </a>
-                            <a class="appCard"  target="_blank">
+                            <a class="appCard" href="app6.html" target="_blank">
                                 <div class="appName">
                                     <input type="text" class="tile" name="app6"> 
                                 </div>
@@ -346,7 +346,7 @@
         loading.style.display = 'none';
     }, 100);
     function hideAll() {
-        const sections = ['apps', 'games', 'acc', 'contat', 'exit'];
+        const sections = ['apps', 'acc', 'contat', 'exit'];
         sections.forEach(section => {
             document.getElementById(section).style.display = 'none';
         });
@@ -355,6 +355,14 @@
         hideAll();
         document.getElementById(sectionId).style.display = 'block';
     }
+    
+    const source = sessionStorage.getItem('source');
+
+    if (source == 'user') {
+        document.getElementById(add).style.display = 'none';
+    } else if (source == 'dev') {
+        document.getElementById(add).style.display = 'block';
+    } 
 </script>
 </body>
 </html>
