@@ -202,8 +202,8 @@
         }
         
         #acc {
-            background-image: url(confucat.jpg);
-            display: none;
+        /*    background-image: url(confucat.jpg);
+        */  display: none;
         }
 
         #contat {
@@ -241,7 +241,13 @@
             font-weight: bold;
             margin-bottom: 10px;
         }
-
+        .del{
+            color: white;
+            font-size: 20px;
+            font-weight: normal;
+            margin-top: -20px;
+            margin-left: 90px;
+        }
         .appicon{
             width: 120px;
             height: 120px;
@@ -270,6 +276,17 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif    ;
             color: white;
         }
+        #accname{
+            background-color: transparent;
+            border: transparent;
+            color: white;
+            height: 80px;
+            font-size: 60px;
+        }
+        .devs{
+            height:1000px;
+            width: 300px;
+        }
     </style>
 </head>
 <body>
@@ -297,7 +314,7 @@
                     <li><a href="#" onclick="show('apps')"><span class="material-symbols-outlined"><img class="icon" src="apps.png"> </span><span>Apps</span></a></li>
                     <li><a href="#" onclick="show('acc')"><span class="material-symbols-outlined"><img class="icon" src="acc.png"> </span><span>Account</span></a></li>
                     <li><a href="#" onclick="show('contat')"><span class="material-symbols-outlined"><img class="icon" src="contat.png"> </span><span>Contact</span></a></li>
-                    <li><a href="#" onclick="show('exit')"><span class="material-symbols-outlined"><img class="icon" src="exit.png"> </span><span>Exit</span></a></li>
+                    <li><a href="LOGIN.html"><span class="material-symbols-outlined"><img class="icon" src="exit.png"> </span><span>Exit</span></a></li>
                 </ul>
             </div>
             <div id="mainmain">
@@ -305,47 +322,76 @@
                     <div>
                         <form>
                             <div class="appbox" id="appContainer">
-                                <a class="appCard" href="app1.html" target="_blank">
-                                    <div class="appName">
-                                        <img class="appicon" src="gpt.png">
-                                        <input type="text" class="tile" name="app1" value="Chat-GPT"> 
-                                    </div>
-                                </a>
-                                <a class="appCard" href="app2.html" target="_blank">
-                                    <div class="appName">
-                                        <img class="appicon" src="coc.png">
-                                        <input type="text" class="tile" name="app2" value="Clash of Clans"> 
-                                    </div>
-                                </a>
-                                <a class="appCard" href="app3.html" target="_blank">
-                                    <div class="appName">
-                                        <img class="appicon" src="wussup.png">
-                                        <input type="text" class="tile" name="app3" value="Whatsapp"> 
-                                    </div>
-                                </a>
-                                <a class="appCard" href="app4.html" target="_blank">
-                                    <div class="appName">
-                                        <img class="appicon" style="margin-left: 30px; width: 140px;" src="tube.png">
-                                        <input type="text" class="tile" name="app4" value="YouTube"> 
-                                    </div>
-                                </a>
-                                <a class="appCard" href="app5.html" target="_blank">
-                                    <div class="appName">
-                                        <input type="text" class="tile" name="app5"> 
-                                    </div>
-                                </a>
-                                <a class="appCard" href="app6.html" target="_blank">
-                                    <div class="appName">
-                                        <input type="text" class="tile" name="app6"> 
-                                    </div>
-                                </a>
+                                <div class="clapps">
+                                    <a class="appCard" href="app1.html" target="_blank">
+                                        <div class="appName">
+                                            <img class="appicon" src="gpt.png">
+                                            <input type="text" class="tile" name="app1" value="Chat-GPT"> 
+                                        </div>
+                                    </a>
+                                    <div class="del" href="#" onclick="resetAndMove('app1')">Delete</div>
+                                </div>
+                                <div class="clapps">
+                                    <a class="appCard" href="app2.html" target="_blank">
+                                        <div class="appName">
+                                            <img class="appicon" src="coc.png">
+                                            <input type="text" class="tile" name="app2" value="Clash of Clans"> 
+                                        </div>
+                                    </a>
+                                    <div class="del" href="#" onclick="resetAndMove('app1')">Delete</div>
+                                </div>
+                                <div class="clapps">
+                                    <a class="appCard" href="app3.html" target="_blank">
+                                        <div class="appName">
+                                            <img class="appicon" src="wussup.png">
+                                            <input type="text" class="tile" name="app3" value="Whatsapp"> 
+                                        </div>
+                                    </a>
+                                    <div class="del" href="#" onclick="resetAndMove('app1')">Delete</div>
+                                </div>
+                                <div class="clapps">
+                                    <a class="appCard" href="app4.html" target="_blank">
+                                        <div class="appName">
+                                            <img class="appicon" style="margin-left: 30px; width: 140px;" src="tube.png">
+                                            <input type="text" class="tile" name="app4" value="YouTube"> 
+                                        </div>
+                                    </a>
+                                    <div class="del" href="#" onclick="resetAndMove('app1')">Delete</div>
+                                </div>
+                                <div class="clapps">
+                                    <a class="appCard" href="app5.html" target="_blank">
+                                        <div class="appName" style="display: none;">
+                                            <img class="appicon" src="error.png">
+                                            <input type="text" class="tile" name="app5"> 
+                                        </div>
+                                    </a>
+                                    <div class="del" href="#" onclick="resetAndMove('app1')" style="display: none;">Delete</div>
+                                </div>
+                                <div class="clapps">
+                                    <a class="appCard" href="app6.html" target="_blank">
+                                        <div class="appName" style="display: none;">
+                                            <img class="appicon" src="error.png">
+                                            <input type="text" class="tile" name="app6"> 
+                                        </div>
+                                    </a>
+                                    <div class="del" href="#" onclick="resetAndMove('app1')" style="display: none;">Delete</div>
+                                </div>
                             </div>
                         </form>
                     </div>
                 </div>
-                <div class="subs" id="acc"></div>
-                <div class="subs" id="contat"></div>
-                <div class="subs" id="exit"></div>
+                <div class="subs" id="acc">
+                    <h1>HELLO YOU ARE</h1>
+                    <div style="margin-top: 100px; display: flex; justify-content: center;">
+                        <img style="height: 100px; width: 100px;" src="acc.png">
+                        <input id="accname" type="text">
+                    </div>
+                </div>
+                <div class="subs" id="contat">
+                    <div class="devs" id="Nanda">
+                        <h1>NANDAKISHORE T J</h1>
+                    </div>
+                </div>
                 <a href="add.html" ><span class="material-symbols-outlined" id="add"><img class="icon" src="add.png"> </span></a>
             </div>
         </div>
@@ -356,7 +402,7 @@
             loading.style.display = 'none';
         }, 100);
         function hideAll() {
-            const sections = ['apps', 'acc', 'contat', 'exit'];
+            const sections = ['apps', 'acc', 'contat'];
             sections.forEach(section => {
                 document.getElementById(section).style.display = 'none';
             });
@@ -365,7 +411,29 @@
             hideAll();
             document.getElementById(sectionId).style.display = 'block';
         }
-        
+        function resetAndMove(tileName) {
+            // Find the tile element by name
+            var tileElement = document.querySelector(`[name="${tileName}"]`);
+
+            // Remove the tile from its parent (appCard)
+            var appCard = tileElement.closest('.clapps');
+            appCard.remove();
+
+            // Create a new appCard with the reset tile and append it to the appContainer
+            var appContainer = document.getElementById('appContainer');
+            var newAppCard = document.createElement('a');
+            newAppCard.className = 'appCard';
+            newAppCard.href = '#';  // Update the href attribute as needed
+
+            // Append the reset tile to the new appCard
+            var newTile = document.createElement('div');
+            newTile.className = 'appName';
+            newTile.innerHTML = `<input type="text" class="tile" name="${tileName}" value="">`;
+            newAppCard.appendChild(newTile);
+
+            // Append the new appCard to the appContainer
+            appContainer.appendChild(newAppCard);
+        }
     </script>
 </body>
 </html>
