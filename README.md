@@ -11,7 +11,6 @@ Web-side : HTML, CSS
 
 Credits:
 
-
 Nandakishore TJ - Frontend dealing with the website
 
 Tom Rajeev - Backend dealing with the database
